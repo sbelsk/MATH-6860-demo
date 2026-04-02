@@ -1,7 +1,6 @@
 {
     "name": "FEniCSx Demo",
-    "build": {
-        "dockerfile": "../Dockerfile"
-    },
-    "forwardPorts": [8888]
+    "image": "dolfinx/dolfinx:stable",
+    "forwardPorts": [8888],
+    "postCreateCommand": "python -m pip install --upgrade pip && pip install jupyterlab numpy matplotlib scipy"
 }
